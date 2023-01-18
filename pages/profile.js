@@ -122,7 +122,7 @@ export default function ProfileScreen() {
           )}
           {errors.confirmPassword &&
             errors.confirmPassword.type === 'validate' && (
-              <div className="text-red-500 ">Password do not match</div>
+              <div className="text-red-500 ">Passwords do not match</div>
             )}
         </div>
         <div className="mb-4">
@@ -134,4 +134,3 @@ export default function ProfileScreen() {
 }
 
 ProfileScreen.auth = true;
-

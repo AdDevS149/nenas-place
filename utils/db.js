@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const connection = {};
 
-mongoose.set('strictQuery', true)
+mongoose.set('strictQuery', true);
 
 async function connect() {
   if (connection.isConnected) {
@@ -17,10 +17,13 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
-  const db = await mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  const db = await mongoose.connect(
+    process.env.MONGODB_URI
+    //   {
+    //   useNewUrlParser: true,
+    //   useUnifiedTopology: true,
+    // }
+  );
   console.log('new connection');
   connection.isConnected = db.connections[0].readyState;
 }

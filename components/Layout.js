@@ -40,9 +40,7 @@ export default function Layout({ title, children }) {
     <>
       <Head>
         <title>
-          {title
-            ? title + '  - Nena&apos;sfavorite123'
-            : 'Nena&apos;sfavorite123'}
+          {title ? title + "  - Nena'sfavorite123" : 'Nena&apos;sfavorite123'}
         </title>
         <meta name="description" content="Ecommerce Website" />
         <link rel="icon" href="/favicon.ico" />
@@ -117,15 +115,19 @@ export default function Layout({ title, children }) {
                         </DropdownLink>
                       </Menu.Item>
                     )}
-                    <Menu.Item legacyBehavior>
-                      <a
-                        className="dropdown-link"
-                        href="#"
-                        onClick={logoutClickHandler}
-                      >
-                        Logout
-                      </a>
+
+
+                    <Menu.Item>
+                      <Link href="/" legacyBehavior>
+                        <a
+                          className="dropdown-link"
+                          onClick={logoutClickHandler}
+                        >
+                          Logout
+                        </a>
+                      </Link>
                     </Menu.Item>
+                    
                   </Menu.Items>
                 </Menu>
               ) : (
